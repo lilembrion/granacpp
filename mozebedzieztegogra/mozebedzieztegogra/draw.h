@@ -8,5 +8,7 @@ void DrawFilledTriangle(SDL_Renderer* renderer, int x1, int y1, int x2, int y2, 
 void DrawFilledRectangle(SDL_Renderer* renderer, int x, int y, int width, int height, SDL_Color color);
 void DrawRotatedRect(SDL_Renderer* renderer, int x, int y, int width, int height, double angle, SDL_Color color);
 void DrawFilledCircle(SDL_Renderer* renderer, int centerX, int centerY, int radius, SDL_Color color);
+void DrawFilledHalfCircle(SDL_Renderer* renderer, int centerX, int centerY, int radius, SDL_Color color);
+void DrawFilledEllipse(SDL_Renderer* renderer, int centerX, int centerY, int radiusX, int radiusY, SDL_Color color);
 
 #endif // DRAW_H

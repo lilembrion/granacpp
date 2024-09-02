@@ -130,12 +130,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="chodzenie.cpp" />
     <ClCompile Include="fukcje.cpp" />
     <ClCompile Include="mozebedzieztegogra.cpp" />
     <ClCompile Include="postacbokiem1.cpp" />
     <ClCompile Include="postacbokiem2.cpp" />
     <ClCompile Include="postacbokiem3.cpp" />
     <ClCompile Include="postacbokiem4.cpp" />
+    <ClCompile Include="postacprzodem1.cpp" />
+    <ClCompile Include="postacprzodem2.cpp" />
+    <ClCompile Include="postacprzodem3.cpp" />
+    <ClCompile Include="skakanie.cpp" />
+    <ClCompile Include="skakaniebokiem.cpp" />
+    <ClCompile Include="skokbokiem2.cpp" />
+    <ClCompile Include="skokbokiem3.cpp" />
+    <ClCompile Include="statek.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="draw.h" />
@@ -143,6 +152,13 @@
     <ClInclude Include="frame2.h" />
     <ClInclude Include="frame3.h" />
     <ClInclude Include="frame4.h" />
+    <ClInclude Include="moves.h" />
+    <ClInclude Include="jumpframe1.h" />
+    <ClInclude Include="jumpframe2.h" />
+    <ClInclude Include="jumpframe3.h" />
+    <ClInclude Include="sidejumpframe2.h" />
+    <ClInclude Include="sidejumpframe3.h" />
+    <ClInclude Include="spaceship.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

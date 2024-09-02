@@ -1,11 +1,11 @@
 #include <SDL.h>
-#include "frame1.h"
-#include "frame2.h"
-#include "frame3.h"
-#include "frame4.h"
+#include "jumpframe1.h"
+#include "jumpframe2.h"
+#include "jumpframe3.h"
 #include "moves.h"
 
-void WalkAnimation() {
+void JumpAnimation() {
+
     // Initialize SDL
     if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
         SDL_Log("Nie mo¿na zainicjalizowaæ SDL: %s", SDL_GetError());
@@ -40,22 +40,21 @@ void WalkAnimation() {
         }
 
         // Draw frames in sequence
-        DrawFrame1(renderer);
+        DrawJumpFrame1(renderer);
         SDL_RenderPresent(renderer);
-        SDL_Delay(250); // Delay for 250 milliseconds
+        SDL_Delay(150); // Delay for 250 milliseconds
 
-        DrawFrame4(renderer);
+        DrawJumpFrame2(renderer);
         SDL_RenderPresent(renderer);
-        SDL_Delay(25);
+        SDL_Delay(150);
 
-        DrawFrame2(renderer);
+        DrawJumpFrame3(renderer);
         SDL_RenderPresent(renderer);
-        SDL_Delay(250);
+        SDL_Delay(150);
 
-        DrawFrame4(renderer);
+        DrawJumpFrame2(renderer);
         SDL_RenderPresent(renderer);
-        SDL_Delay(250);
-      
+        SDL_Delay(150);
     }
 
     // Cleanup

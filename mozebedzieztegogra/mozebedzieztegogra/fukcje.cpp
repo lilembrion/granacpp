@@ -84,3 +84,32 @@ void DrawFilledCircle(SDL_Renderer* renderer, int centerX, int centerY, int radi
         }
     }
 }
+
+// Funkcja rysuj¹ca wype³nion¹ górn¹ po³owê ko³a
+void DrawFilledHalfCircle(SDL_Renderer* renderer, int centerX, int centerY, int radius, SDL_Color color) {
+    // Ustawienie koloru rysowania
+    SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
+
+    // Rysowanie wype³nionej górnej po³owy ko³a
+    for (int y = 0; y <= radius; ++y) {
+        for (int x = -radius; x <= radius; ++x) {
+            if (x * x + y * y <= radius * radius) {
+                SDL_RenderDrawPoint(renderer, centerX + x, centerY - y);
+            }
+        }
+    }
+}
+// Funkcja rysuj¹ca wype³nion¹ elipsê
+void DrawFilledEllipse(SDL_Renderer* renderer, int centerX, int centerY, int radiusX, int radiusY, SDL_Color color) {
+    // Ustawienie koloru rysowania
+    SDL_SetRenderDrawColor(renderer, color.r, color.g, color.b, color.a);
+
+    // Rysowanie wype³nionej elipsy
+    for (int y = -radiusY; y <= radiusY; ++y) {
+        for (int x = -radiusX; x <= radiusX; ++x) {
+            if ((x * x * radiusY * radiusY + y * y * radiusX * radiusX) <= (radiusX * radiusX * radiusY * radiusY)) {
+                SDL_RenderDrawPoint(renderer, centerX + x, centerY + y);
+            }
+        }
+    }
+}

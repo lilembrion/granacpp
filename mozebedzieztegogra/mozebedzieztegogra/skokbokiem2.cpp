@@ -1,9 +1,10 @@
 #include <SDL.h>
 #include <iostream>
 #include "draw.h"
-#include "frame2.h"
+#include "sidejumpframe2.h"
 
-void DrawFrame2 (SDL_Renderer* renderer){
+
+void DrawSideJumpFrame2(SDL_Renderer* renderer) {
 
     // Kolor trójk¹ta
     SDL_Color bodycolor = { 201, 227, 154, 255 }; // jasnozielony
@@ -20,12 +21,12 @@ void DrawFrame2 (SDL_Renderer* renderer){
     SDL_RenderClear(renderer);
 
     //kopniete prostokaty
-          //DrawRotatedRect(renderer, 280, 330, 150, 20, 120, bodycolor); //reka lewa
-          //DrawRotatedRect(renderer, 337, 320, 150, 20, 120, bodycolor); //reka prawa
-    DrawRotatedRect(renderer, 285, 520, 50, 180, -10, legscolor); //spodnie prawa
-    DrawRotatedRect(renderer, 250, 500, 50, 190, 20, legscolor); //spodnie lewa
-    DrawRotatedRect(renderer, 185, 680, 60, 50, 20, shoescolor); //buty
-    DrawRotatedRect(renderer, 315, 695, 60, 50, -10, shoescolor); //buty
+        //DrawRotatedRect(renderer, 280, 330, 150, 20, 120, bodycolor); //reka lewa
+    DrawRotatedRect(renderer, 337, 320, 150, 20, 50, bodycolor); //reka prawa
+    DrawRotatedRect(renderer, 285, 520, 50, 190, -20, legscolor); //spodnie prawa
+    DrawRotatedRect(renderer, 250, 510, 50, 190, 10, legscolor); //spodnie lewa
+    DrawRotatedRect(renderer, 215, 695, 60, 50, 10, shoescolor); //buty
+    DrawRotatedRect(renderer, 348, 697, 60, 50, -20, shoescolor); //buty
 
 
 
@@ -49,19 +50,14 @@ void DrawFrame2 (SDL_Renderer* renderer){
     DrawFilledTriangle(renderer, 315, 280, 315, 290, 350, 285, beltcolor); //kolec prawy
 
     //kolka
-    /*
+
     DrawFilledCircle(renderer, 260, 150, 10, eyescolor1); //oko lewe
     DrawFilledCircle(renderer, 260, 150, 5, eyescolor2);
     DrawFilledCircle(renderer, 380, 150, 10, eyescolor1); //oko prawe
     DrawFilledCircle(renderer, 380, 150, 5, eyescolor2);
-    */
-
-    DrawFilledRectangle(renderer, 250, 148, 20, 3, eyescolor2); //oko zamkkniete
-    DrawFilledRectangle(renderer, 370, 148, 20, 3, eyescolor2); //oko zamkkniete
-
 
     //kopniety prostokat na wierzchu
-    DrawRotatedRect(renderer, 270, 330, 20, 150, -30, bodycolor); //reka lewa
+    DrawRotatedRect(renderer, 270, 330, 20, 150, 30, bodycolor); //reka lewa
 
     // Prezentacja renderera
     SDL_RenderPresent(renderer);

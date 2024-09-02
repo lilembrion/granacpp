@@ -1,9 +1,9 @@
 #include <SDL.h>
 #include <iostream>
 #include "draw.h"
-#include "frame2.h"
+#include "sidejumpframe2.h"
 
-void DrawFrame2 (SDL_Renderer* renderer){
+void DrawSideJumpFrame3(SDL_Renderer* renderer) {
 
     // Kolor trójk¹ta
     SDL_Color bodycolor = { 201, 227, 154, 255 }; // jasnozielony
@@ -20,8 +20,8 @@ void DrawFrame2 (SDL_Renderer* renderer){
     SDL_RenderClear(renderer);
 
     //kopniete prostokaty
-          //DrawRotatedRect(renderer, 280, 330, 150, 20, 120, bodycolor); //reka lewa
-          //DrawRotatedRect(renderer, 337, 320, 150, 20, 120, bodycolor); //reka prawa
+        //DrawRotatedRect(renderer, 280, 330, 150, 20, 120, bodycolor); //reka lewa
+        //DrawRotatedRect(renderer, 337, 320, 150, 20, 120, bodycolor); //reka prawa
     DrawRotatedRect(renderer, 285, 520, 50, 180, -10, legscolor); //spodnie prawa
     DrawRotatedRect(renderer, 250, 500, 50, 190, 20, legscolor); //spodnie lewa
     DrawRotatedRect(renderer, 185, 680, 60, 50, 20, shoescolor); //buty
